@@ -20,12 +20,11 @@ def startApp():
                 invalid_letters.add(item)
 
     def readValidWords():
-        with open("words_alpha.txt", "r") as file:
+        with open("five_letter_words.txt", "r") as file:
             for line in file:
                 line = line.rstrip()
                 line = line.lstrip()
-                if len(line) == 5:
-                    possible_options.append(line)
+                possible_options.append(line)
 
     def updatePossibleOptions():
         new_check = possible_options.copy()
